@@ -68,6 +68,10 @@ def factorial(num):
     return newnum
 print(factorial(4))
 
+import math
+num = input('请输入一个数字：')
+print(math.factorial(num))
+
 # 斐波那契数列
 def fibonacci(num):
     a, b = 0, 1
