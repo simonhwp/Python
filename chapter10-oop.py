@@ -1,7 +1,7 @@
 # 13-3 对类进行定制，用来将浮点型值转换为金额
 class MoneyFmt(object):
     def __init__(self, value):
-        self.value = value
+        self.value = float(value)
 
     def updatemoney(self, value):
         if value is not None:
