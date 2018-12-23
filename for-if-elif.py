@@ -82,3 +82,28 @@ def fibonacci(num):
     print(templist[-1])
 
 fibonacci(6)
+
+# 文本处理
+from collections import OrderedDict
+
+num = input('Enter total number of names:')
+namedict = {}
+errnum = 0
+for i in range(int(num)):
+    # lastname, firstname = input('Please enter name %d' %i).split(',')
+    name = input('Please enter name %d: ' %i)
+    if -1 < name.find(','):
+        name = name.split(',')
+        namedict[name[0]] = name[1]
+    else:
+        errnum += 1
+        print('>> Wrong format... should be Last, First.')
+        print('>> You have done this %d time(s) already. Fixing input...' %errnum)
+        name = name.split(' ')
+        namedict[name[1]] = name[0]    
+    print(name[0], name[1])
+
+print('The sorted list (by last name) is:')
+newdict = OrderedDict(sorted(namedict.items(), key=lambda obj: obj[0]))
+for key, value in newdict.items():
+    print(key, ', ', value)
