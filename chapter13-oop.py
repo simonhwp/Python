@@ -37,7 +37,7 @@ class DBMnage(object):
     def __init__(self, nm, pw):
         self.name = nm
         self.password = pw
-        self.login_time = ctime()
+        self.login_time = time.ctime()
 
     def updatepwd(self, newpwd):
         self.password = newpwd
