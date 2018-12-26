@@ -10,7 +10,12 @@
 #     print(eachline, end='')    
 # fp.close()
 
-f = open(r'C:\Users\simon\Desktop\testfor.txt')
-for i in range(5):
-    print(f.readline().strip())
+# f = open(r'C:\Users\simon\Desktop\testfor.txt')
+# for i in range(5):
+#     print(f.readline().strip())
  
+from datetime import datetime
+now=datetime.now()
+print(now.strftime('%m'))
+# strtime.strftime('%m')
+
